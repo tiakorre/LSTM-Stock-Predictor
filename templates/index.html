@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Stock Predictor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Stock Predictor</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label for="ticker">Stock Ticker</label>
+                <input type="text" class="form-control" id="ticker" name="ticker" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+        {% if prediction %}
+            <h2 class="mt-5">{{ prediction }}</h2>
+            <img src="{{ image }}" class="img-fluid mt-3" alt="Prediction Chart">
+        {% endif %}
+    </div>
+</body>
+</html>
+
+
