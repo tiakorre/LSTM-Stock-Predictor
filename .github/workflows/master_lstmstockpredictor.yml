@@ -3,7 +3,7 @@ name: Build and deploy Django app to Azure Web App - LSTMstockpredictor
 on:
   push:
     branches:
-      - main  # Change this to master if you're using the master branch
+      - master
   workflow_dispatch:
 
 jobs:
